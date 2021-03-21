@@ -12,6 +12,7 @@ export default {
   title: 'Components/Button',
   component: Button,
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
+//   decorators: [story => <Center style={{ padding: '3rem' }}>{story()}</Center>], -> remove a necessidade de adicionar a tag center em todas as stories
   argTypes : {
       variantColor: {control: 'text'},
       children: {control: 'text'},
