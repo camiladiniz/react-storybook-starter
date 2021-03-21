@@ -23,6 +23,13 @@ Default.args = {
     ],
 };
 
+Default.parameters = {
+    design: {
+        type: "figma",
+        url: "" // <-- paste figma link here!
+      }
+}
+
 export const WithPinnedTasks = Template.bind({});
 WithPinnedTasks.args = {
     // shaping the storues through args composition
