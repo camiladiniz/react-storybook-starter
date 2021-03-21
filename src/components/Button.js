@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 
-const Button = ({ children, disabled = false, ...rest }) => {
+const Button = ({ children, disabled = false, backgroundColor, ...rest }) => {
   return (
-    <button className={`button ${disabled ? 'disabled' : ''}`} {...rest} disabled={disabled}>
+    <button className={`button ${disabled ? 'disabled' : ''}`} {...rest} style={{backgroundColor: backgroundColor}} disabled={disabled}>
       { children }
     </button>
   )

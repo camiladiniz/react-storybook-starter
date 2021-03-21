@@ -6,22 +6,34 @@ import { action } from '@storybook/addon-actions';
 
 import Button  from './Button';
 
+import Center from './Center/Center';
+
 export default {
   title: 'Components/Button',
   component: Button,
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
+  argTypes : {
+      variantColor: {control: 'text'},
+      children: {control: 'text'},
+    //   onClick: {action: 'clicked'} -> faz o mesmo que o inline  onClick={action('clicked')}
+  }
 }
 
 const Template = args => <Button {...args}></Button>
 
 export const ButtonPrimary = Template.bind({});
+ButtonPrimary.args = {
+    variantColor: 'green',
+    children: 'Texto escrito através de args control'
+}
 
-export const Primary = () => <Button primary onClick={action('clicked')}>Button</Button>;
+export const Primary = () => <Center><Button primary onClick={action('clicked')}>Button</Button></Center>;
 Primary.storyName = 'I am the primary';
 
 
 export const Disabled = () => <Button primary onClick={action('clicked')} disabled={true}>Button</Button>;
 Disabled.args = {
+    ...Primary.args, // faz uma cópia dos dados
     disabled:true
 }
 
