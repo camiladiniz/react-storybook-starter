@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Components/Button Emoji 1`] = `
+<button
+  className="button"
+  onClick={[Function]}
+  primary={true}
+>
+  <span
+    aria-label="so cool"
+    role="img"
+  >
+    😄👍😍💯
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Button I am the primary 1`] = `
+<button
+  className="button"
+  onClick={[Function]}
+  primary={true}
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Components/Button Primary 1`] = `
+<button
+  className="button"
+  onClick={[Function]}
+  primary={true}
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots Components/Button Secondary 1`] = `
+<button
+  className="button"
+  label="😄👍😍💯"
+/>
+`;
+
+exports[`Storyshots Components/Button Tertiary 1`] = `
+<button
+  className="button"
+  label="📚📕📈🤓"
+/>
+`;
+
 exports[`Storyshots InboxScreen Default 1`] = `
 <div
   className="page lists-show"
